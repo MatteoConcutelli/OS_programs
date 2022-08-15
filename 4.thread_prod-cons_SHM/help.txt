@@ -1,0 +1,22 @@
+per compilare :
+	
+	gcc -lrt -pthread "produttore.c | consumatore.c | main.c"
+
+---------------
+
+Per eseguire :
+	
+  o avvii il main a.out
+  o avvii prima il produttore e poi il consumatore
+
+--------------
+
+Cosa fa: 
+	
+	- il main crea funzioni, produttore (scrive) e il consumatore (legge) , questi comunicano tra di loro utilizzando un buffer
+	  condiviso. Qui c'è il problema di accesso/modifica sulla variabile. Può succedere che il produttore
+	  scrive ma il consumatore è stato ripreso prima che stampasse la var vecchia. 
+
+  - oppure avvia prima il produttore che crea la memoria condivisa caricando
+    alcune stringhe.Poi avvia il consumatore che legge nella memoria le stringhe messe dal produttore, 
+    e poi la dealloca.
