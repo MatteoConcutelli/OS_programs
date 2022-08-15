@@ -3,4 +3,4 @@ Some C programs from the course Operating Systems [computer science Tor Vergata]
 
 To compile :
 	
-	gcc -lrt -pthread "nameFile.c" -o "nameExecFile"
+	gcc -lrt -pthread "fileName.c" -o "ExecFilename"
